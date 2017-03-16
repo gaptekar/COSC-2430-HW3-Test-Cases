@@ -7,7 +7,6 @@ I verified all answers by writing a script in python, which I also included.
 It took my program about 4 seconds to run through the first file and less than 1 second for the other file.
 
 # How to Run
-Markup : 
  * Click the green "Clone or download" button
  * Click download zip
  * Put either your hw3.exe or all your c++ files in the folder

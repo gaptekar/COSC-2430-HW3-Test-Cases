@@ -7,7 +7,7 @@ DIFFERENCES=differences
 timeout="10s"
 # clean
 rm -f *.out *.err *.stderr *.stdout *.diff 2>/dev/null
-#rm -f hw3
+rm -f hw3
 #Compile the code
 g++ -std=c++11 *.cpp -o hw3 2>COMPILE.err
 #will create folders so that you can see

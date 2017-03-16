@@ -36,16 +36,18 @@ do
     #is there an answer for this test case
     if [ -e $ANSWERS/$filename.ans ]; then
       #store the program output in the response folder
+      start=`date +%s`
       timeout -k $timeout $timeout ./hw3 "input=$test;digitsPerNode=8" 1>$RESPONSES/$filename.stdcout
       # compare the input and output, output the difference to 1.diff
       diff -iEBwu $RESPONSES/$filename.stdcout $ANSWERS/$filename.ans > $DIFFERENCES/$filename.diff
       # if diff returns nothing, it means you pass the test case (Your output file is correct)
       if [ $? -ne 0 ]; then
           # display "test case FAILED" to the screen. The word "FAILED" is highlighted in Red color
-          echo -e "Test case "$filename"    \033[1;91mFAILED.\033[0m"
+          echo -e "Test case: "$filename"    \033[1;91mFAILED.\033[0m"
       else
           # display "test case PASSED" to the screen. The word "PASSED" is highlighted in Green color
-          echo -e "Test case "$filename"    \033[1;92mPASSED.\033[0m"
+          end=`date +%s`
+          echo -e "Test case: "$filename"    \033[1;92mPASSED.\033[0m" \~$((end-start)) second\(s\)
           # remove the file 1.diff
           rm -f $DIFFERENCES/$filename.diff
       fi

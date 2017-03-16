@@ -1,4 +1,4 @@
-#this program will run your compiled program against all test cases
+#this program will run your compiled  program against all test cases
 #the names of the subfolders
 TESTS=tests
 ANSWERS=answers

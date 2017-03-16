@@ -1,19 +1,15 @@
 #this program will run your compiled program against all test cases
-
-
 #the names of the subfolders
 TESTS=tests
 ANSWERS=answers
 RESPONSES=responses
 DIFFERENCES=differences
 timeout="10s"
-
 # clean
 rm -f *.out *.err *.stderr *.stdout *.diff 2>/dev/null
 #rm -f hw3
 #Compile the code
 g++ -std=c++11 *.cpp -o hw3 2>COMPILE.err
-
 #will create folders so that you can see
 #the results of the program
 if [ ! -d $RESPONSES ]; then
@@ -37,7 +33,6 @@ do
     #get the name of the text file and store it in filename
     filename=$(basename "$test")
     filename="${filename%.*}"
-
     #is there an answer for this test case
     if [ -e $ANSWERS/$filename.ans ]; then
       #store the program output in the response folder

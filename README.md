@@ -1,4 +1,4 @@
-# Test Cases for Homework 3 in COSC:2430
+# Test Cases for Homework 3
 
 
 I made these test cases because the TA's haven't given us any yet.
@@ -12,7 +12,7 @@ Click download zip
 Put either your hw3.exe or all your c++ files in the folder
 Run: sh ./testall.sh
 Look in the differences folder if you failed any
-
+If you keep timing out on random_tests.txt don't worry about it. It's 200 times larger than the max input file
 
 
 

@@ -48,3 +48,6 @@ Temporary Items
 COMPILE.err
 *.stdcout
 *.exe
+*.h
+*.cpp
+CMakeLists.txt
